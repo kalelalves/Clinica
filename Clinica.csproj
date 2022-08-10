@@ -115,6 +115,12 @@
     <Compile Include="View\Ambulatorios.Designer.cs">
       <DependentUpon>Ambulatorios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Consultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Consultas.Designer.cs">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FuncionarioCriar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="View\Funcionarios.Designer.cs">
       <DependentUpon>Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FuncionariosEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FuncionariosEditar.Designer.cs">
+      <DependentUpon>FuncionariosEditar.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Inicio.cs">
       <SubType>Form</SubType>
@@ -177,11 +189,17 @@
     <EmbeddedResource Include="View\Ambulatorios.resx">
       <DependentUpon>Ambulatorios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Consultas.resx">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FuncionarioCriar.resx">
       <DependentUpon>FuncionarioCriar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Funcionarios.resx">
       <DependentUpon>Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FuncionariosEditar.resx">
+      <DependentUpon>FuncionariosEditar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

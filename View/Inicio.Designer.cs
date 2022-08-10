@@ -37,7 +37,7 @@
             // 
             // pacienteBtn
             // 
-            this.pacienteBtn.Location = new System.Drawing.Point(198, 174);
+            this.pacienteBtn.Location = new System.Drawing.Point(175, 109);
             this.pacienteBtn.Name = "pacienteBtn";
             this.pacienteBtn.Size = new System.Drawing.Size(75, 23);
             this.pacienteBtn.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // consultaBtn
             // 
-            this.consultaBtn.Location = new System.Drawing.Point(346, 174);
+            this.consultaBtn.Location = new System.Drawing.Point(323, 109);
             this.consultaBtn.Name = "consultaBtn";
             this.consultaBtn.Size = new System.Drawing.Size(75, 23);
             this.consultaBtn.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // funcionarioBtn
             // 
-            this.funcionarioBtn.Location = new System.Drawing.Point(346, 224);
+            this.funcionarioBtn.Location = new System.Drawing.Point(323, 159);
             this.funcionarioBtn.Name = "funcionarioBtn";
             this.funcionarioBtn.Size = new System.Drawing.Size(75, 23);
             this.funcionarioBtn.TabIndex = 3;
@@ -65,7 +65,7 @@
             // 
             // medicoBtn
             // 
-            this.medicoBtn.Location = new System.Drawing.Point(198, 224);
+            this.medicoBtn.Location = new System.Drawing.Point(175, 159);
             this.medicoBtn.Name = "medicoBtn";
             this.medicoBtn.Size = new System.Drawing.Size(75, 23);
             this.medicoBtn.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.inicioLbl.AutoSize = true;
             this.inicioLbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inicioLbl.Location = new System.Drawing.Point(237, 113);
+            this.inicioLbl.Location = new System.Drawing.Point(214, 48);
             this.inicioLbl.Name = "inicioLbl";
             this.inicioLbl.Size = new System.Drawing.Size(147, 26);
             this.inicioLbl.TabIndex = 4;
