@@ -41,21 +41,18 @@ namespace Clinica
 
         private void salvar_Click(object sender, EventArgs e)
         {
-        //    Paciente paciente = new Paciente();
-        //    paciente.codp = int.Parse(this.codigoValor.Text);
-        //    paciente.nome = this.nomeValor.Text;
-        //    paciente.idade = int.Parse(this.idadeValor.Text);
-        //    paciente.cidade = this.cidadeValor.Text;
-        //    paciente.cpf = this.cpfValor.Text;
-        //    paciente.doenca = this.doencaValor.Text;
+            Paciente paciente = new Paciente();
+            paciente.codp = int.Parse(this.codigoValor.Text);
+            paciente.nome = this.nomeValor.Text;
+            paciente.idade = int.Parse(this.idadeValor.Text);
+            paciente.cidade = this.cidadeValor.Text;
+            paciente.cpf = this.cpfValor.Text;
+            paciente.doenca = this.doencaValor.Text;
 
-        //    ArrayList pacientes = new ArrayList();
-        //    pacientes.Add(paciente);
+            PacienteController controller = new PacienteController();
+            controller.salvar(paciente);
+            this.Close();
 
-        //    Pacientes listagem = new Pacientes(pacientes);
-        //    listagem.Show();
-        //    this.Close();
-            
         }
     }
 }

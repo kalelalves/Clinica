@@ -56,9 +56,9 @@
             this.cidade,
             this.cpf,
             this.doenca});
-            this.listagem.Location = new System.Drawing.Point(12, 56);
+            this.listagem.Location = new System.Drawing.Point(13, 56);
             this.listagem.Name = "listagem";
-            this.listagem.Size = new System.Drawing.Size(459, 163);
+            this.listagem.Size = new System.Drawing.Size(652, 174);
             this.listagem.TabIndex = 0;
             this.listagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listagem_CellContentClick);
             // 
@@ -92,25 +92,27 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(13, 236);
+            this.button2.Location = new System.Drawing.Point(13, 315);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(180, 236);
+            this.button3.Location = new System.Drawing.Point(181, 315);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
             this.button3.Text = "Deletar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(378, 236);
+            this.button4.Location = new System.Drawing.Point(381, 315);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 6;
@@ -144,7 +146,6 @@
             this.codp.DataPropertyName = "codp";
             this.codp.HeaderText = "Codigo";
             this.codp.Name = "codp";
-            this.codp.Visible = false;
             // 
             // nome
             // 
@@ -175,13 +176,12 @@
             this.doenca.DataPropertyName = "doenca";
             this.doenca.HeaderText = "Doença";
             this.doenca.Name = "doenca";
-            this.doenca.Visible = false;
             // 
             // Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 271);
+            this.ClientSize = new System.Drawing.Size(670, 373);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

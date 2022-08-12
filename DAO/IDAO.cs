@@ -13,8 +13,8 @@ namespace Clinica
         DataTable all();
         Object create(object objeto);
         Object read(object chave);
-        Object update(object objeto);
-        Object delete(object chave);
+        void update(object objeto);
+        void delete(object chave);
 
 
 

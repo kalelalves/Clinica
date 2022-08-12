@@ -33,19 +33,23 @@ namespace Clinica
             PacientesEditar edicao = new PacientesEditar(paciente);
             edicao.Show();
         }
-        //public void salvar(object objeto)
-        ////{
-        ////    Paciente paciente = (Paciente)objeto;
+        public void salvar(object objeto)
+        {
+            Paciente paciente = (Paciente)objeto;
+            PacienteDAO pacienteDAO = new PacienteDAO();
+            pacienteDAO.update(paciente);
 
-        ////    PacienteDAO pacienteDAO = new PacienteDAO();
+             listar();
 
-        ////    paciente = (Paciente)pacienteDAO.update(paciente);
+        }
+        internal void deletar(object objeto)
+        {
+            Paciente paciente = (Paciente)objeto;
 
-        ////    ArrayList todos = pacienteDAO.all();
-        ////    Pacientes listagem = new Pacientes(todos);
-        ////    listagem.Show();
+            PacienteDAO pacienteDAO = new PacienteDAO();
+            pacienteDAO.delete(paciente);
+            listar();
+        }
 
-        //}
-
+        }
     }
-}
