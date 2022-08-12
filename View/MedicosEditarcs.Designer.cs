@@ -81,9 +81,9 @@
             this.titulo_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo_label.Location = new System.Drawing.Point(185, 27);
             this.titulo_label.Name = "titulo_label";
-            this.titulo_label.Size = new System.Drawing.Size(187, 24);
+            this.titulo_label.Size = new System.Drawing.Size(145, 24);
             this.titulo_label.TabIndex = 42;
-            this.titulo_label.Text = "Criar novo Medico:";
+            this.titulo_label.Text = "Editar Medico:";
             this.titulo_label.Click += new System.EventHandler(this.titulo_label_Click);
             // 
             // especialidadeValor

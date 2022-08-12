@@ -43,6 +43,7 @@
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doenca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.listagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,10 +66,11 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "Voltar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(380, 237);
+            this.button4.Location = new System.Drawing.Point(414, 278);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 15;
@@ -77,7 +79,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(182, 237);
+            this.button3.Location = new System.Drawing.Point(216, 278);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 14;
@@ -86,7 +88,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(15, 237);
+            this.button2.Location = new System.Drawing.Point(49, 278);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -127,10 +129,11 @@
             this.idade,
             this.cidade,
             this.cpf,
-            this.doenca});
+            this.doenca,
+            this.Salario});
             this.listagem.Location = new System.Drawing.Point(14, 57);
             this.listagem.Name = "listagem";
-            this.listagem.Size = new System.Drawing.Size(459, 163);
+            this.listagem.Size = new System.Drawing.Size(664, 163);
             this.listagem.TabIndex = 9;
             // 
             // codp
@@ -167,15 +170,19 @@
             // doenca
             // 
             this.doenca.DataPropertyName = "doenca";
-            this.doenca.HeaderText = "Doença";
+            this.doenca.HeaderText = "Cargo";
             this.doenca.Name = "doenca";
-            this.doenca.Visible = false;
+            // 
+            // Salario
+            // 
+            this.Salario.HeaderText = "Salario";
+            this.Salario.Name = "Salario";
             // 
             // Funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 293);
+            this.ClientSize = new System.Drawing.Size(709, 349);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -210,5 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn doenca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
     }
 }

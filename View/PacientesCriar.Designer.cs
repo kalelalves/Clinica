@@ -216,7 +216,6 @@
         #endregion
 
         private System.Windows.Forms.Label codigo_label;
-        private System.Windows.Forms.TextBox codigoValor;
         private System.Windows.Forms.TextBox nomeValor;
         private System.Windows.Forms.Label nome_label;
         private System.Windows.Forms.TextBox idadeValor;
@@ -230,5 +229,6 @@
         private System.Windows.Forms.Label titulo_label;
         private System.Windows.Forms.Button salvar;
         private System.Windows.Forms.Button button5;
+        protected System.Windows.Forms.TextBox codigoValor;
     }
 }

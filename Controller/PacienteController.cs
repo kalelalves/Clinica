@@ -17,5 +17,35 @@ namespace Clinica
             Pacientes pacientes = new Pacientes(lista);
             pacientes.Show();
         }
+        public void criar(object objeto)
+        {
+            Paciente paciente = (Paciente)objeto;
+            PacienteDAO pacienteDAO = new PacienteDAO();
+            paciente = (Paciente)pacienteDAO.create(paciente);
+            this.alterar(paciente);
+
+        }
+
+
+        public void alterar(object objeto)
+        {
+            Paciente paciente = (Paciente)objeto;
+            PacientesEditar edicao = new PacientesEditar(paciente);
+            edicao.Show();
+        }
+        //public void salvar(object objeto)
+        ////{
+        ////    Paciente paciente = (Paciente)objeto;
+
+        ////    PacienteDAO pacienteDAO = new PacienteDAO();
+
+        ////    paciente = (Paciente)pacienteDAO.update(paciente);
+
+        ////    ArrayList todos = pacienteDAO.all();
+        ////    Pacientes listagem = new Pacientes(todos);
+        ////    listagem.Show();
+
+        //}
+
     }
 }

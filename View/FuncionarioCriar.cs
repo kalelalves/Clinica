@@ -16,5 +16,10 @@ namespace Clinica.View
         {
             InitializeComponent();
         }
+
+        private void FuncionarioCriar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
