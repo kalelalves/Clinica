@@ -31,13 +31,13 @@
             System.Windows.Forms.Button novoBtn;
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.deletar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.filtroValor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listagem = new System.Windows.Forms.DataGridView();
-            this.codp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,14 +79,15 @@
             novoBtn.UseVisualStyleBackColor = true;
             novoBtn.Click += new System.EventHandler(this.novoBtn_Click);
             // 
-            // button3
+            // deletar
             // 
-            this.button3.Location = new System.Drawing.Point(216, 278);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Deletar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.deletar.Location = new System.Drawing.Point(216, 278);
+            this.deletar.Name = "deletar";
+            this.deletar.Size = new System.Drawing.Size(75, 23);
+            this.deletar.TabIndex = 14;
+            this.deletar.Text = "Deletar";
+            this.deletar.UseVisualStyleBackColor = true;
+            this.deletar.Click += new System.EventHandler(this.deletar_Click);
             // 
             // button2
             // 
@@ -126,7 +127,7 @@
             // 
             this.listagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listagem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codp,
+            this.codf,
             this.nome,
             this.idade,
             this.cidade,
@@ -138,12 +139,11 @@
             this.listagem.Size = new System.Drawing.Size(664, 163);
             this.listagem.TabIndex = 9;
             // 
-            // codp
+            // codf
             // 
-            this.codp.DataPropertyName = "codp";
-            this.codp.HeaderText = "Codigo";
-            this.codp.Name = "codp";
-            this.codp.Visible = false;
+            this.codf.DataPropertyName = "codf";
+            this.codf.HeaderText = "Codigo";
+            this.codf.Name = "codf";
             // 
             // nome
             // 
@@ -189,7 +189,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(novoBtn);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.deletar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.filtroValor);
@@ -208,13 +208,13 @@
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button deletar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox filtroValor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView listagem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codp;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codf;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn idade;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;

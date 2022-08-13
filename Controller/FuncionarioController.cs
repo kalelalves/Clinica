@@ -20,6 +20,32 @@ namespace Clinica.Controller
             Funcionarios funcionarios = new Funcionarios(lista);
             funcionarios.Show();
         }
-       
+
+        public void criar(object objeto)
+        {
+            Funcionario funcionario = (Funcionario)objeto;
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            funcionario = (Funcionario)funcionarioDAO.create(funcionario);
+            this.alterar(funcionario);
+
+
+        }
+        public void alterar(object objeto)
+        {
+            Funcionario funcionario = (Funcionario)objeto;
+             FuncionariosEditar edicao = new FuncionariosEditar(funcionario);
+            edicao.Show();
+        }
+
+        public void deletar(object objeto)
+        {
+            Funcionario funcionario = (Funcionario)objeto;
+
+            FuncionarioDAO funcionarioDAO= new FuncionarioDAO();
+            funcionarioDAO.delete(funcionario);
+            listar();
+
+        }
+
     }
 }

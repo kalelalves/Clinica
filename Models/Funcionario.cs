@@ -15,7 +15,7 @@ namespace Clinica.Models
         public string cidade {get; set; }
         public string cargo { get; set; }
 
-        public int salario { get; set; }
+        public double salario { get; set; }
 
         public override string ToString()
         {

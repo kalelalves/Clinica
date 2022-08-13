@@ -71,6 +71,7 @@
             this.button5.TabIndex = 46;
             this.button5.Text = "Voltar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // salvar
             // 
@@ -212,6 +213,7 @@
             this.Controls.Add(this.codigo_label);
             this.Name = "FuncionariosEditar";
             this.Text = "FuncionariosEditar";
+            this.Load += new System.EventHandler(this.FuncionariosEditar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

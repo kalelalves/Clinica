@@ -64,6 +64,7 @@
             this.salvar.TabIndex = 28;
             this.salvar.Text = "Salvar";
             this.salvar.UseVisualStyleBackColor = true;
+            this.salvar.Click += new System.EventHandler(this.salvar_Click);
             // 
             // titulo_label
             // 
@@ -233,9 +234,9 @@
         private System.Windows.Forms.Label idade_label;
         private System.Windows.Forms.TextBox nomeValor;
         private System.Windows.Forms.Label nome_label;
-        private System.Windows.Forms.TextBox codigoValor;
         private System.Windows.Forms.Label codigo_label;
         private System.Windows.Forms.TextBox salarioValor;
         private System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.TextBox codigoValor;
     }
 }
