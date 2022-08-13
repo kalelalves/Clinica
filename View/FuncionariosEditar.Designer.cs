@@ -81,6 +81,7 @@
             this.salvar.TabIndex = 45;
             this.salvar.Text = "Salvar";
             this.salvar.UseVisualStyleBackColor = true;
+            this.salvar.Click += new System.EventHandler(this.salvar_Click);
             // 
             // titulo_label
             // 

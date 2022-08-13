@@ -83,6 +83,38 @@ namespace Clinica.DAO
 
         public void update(object objeto)
         {
+            Funcionario funcionario = (Funcionario)objeto;
+            MySQLPersist banco = new MySQLPersist();
+
+            try
+            {
+
+                string sql = "update funcionarios" +
+                     " set nome=@nome," +
+                     "idade=@idade," +
+                     "cidade=@cidade," +
+                     "cpf=@cpf," +
+                     "cargo=@cargo," +
+                     "salario=@salario " +
+                     "where codf=@codf";
+
+                List<MySqlParameter> parametros = new List<MySqlParameter>();
+                parametros.Add(new MySqlParameter("@codf", funcionario.codf));
+                parametros.Add(new MySqlParameter("@nome", funcionario.nome));
+                parametros.Add(new MySqlParameter("@idade", funcionario.idade));
+                parametros.Add(new MySqlParameter("@cidade", funcionario.cidade));
+                parametros.Add(new MySqlParameter("@cpf", funcionario.cpf));
+                parametros.Add(new MySqlParameter("@cargo", funcionario.cargo));
+                parametros.Add(new MySqlParameter("@salario", funcionario.salario));
+
+                int id = Convert.ToInt32(banco.ExecuteNonQueryLastKey(sql, parametros));
+                funcionario.codf = id;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            
 
         }
 

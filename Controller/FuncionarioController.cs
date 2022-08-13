@@ -37,6 +37,17 @@ namespace Clinica.Controller
             edicao.Show();
         }
 
+
+        public void salvar(object objeto)
+        {
+            Funcionario funcionario = (Funcionario)objeto;
+
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            funcionarioDAO.update(funcionario);
+            listar();
+
+        }
+
         public void deletar(object objeto)
         {
             Funcionario funcionario = (Funcionario)objeto;

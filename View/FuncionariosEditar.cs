@@ -1,4 +1,5 @@
-﻿using Clinica.Models;
+﻿using Clinica.Controller;
+using Clinica.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,21 @@ namespace Clinica.View
         {
             Inicio inicio = new Inicio();
             inicio.Show();
+            this.Close();
+        }
+
+        private void salvar_Click(object sender, EventArgs e)
+        {
+            Funcionario funcionario = new Funcionario();
+            funcionario.codf = int.Parse(this.codigoValor.Text);
+            funcionario.nome = this.nomeValor.Text;
+            funcionario.cpf = this.cpfValor.Text;
+            funcionario.idade = int.Parse(this.idadeValor.Text);
+            funcionario.cidade = this.cidadeValor.Text;
+            funcionario.cargo = this.cargoValor.Text;
+            funcionario.salario = double.Parse(this.salarioValor.Text);
+            FuncionarioController controller = new FuncionarioController();
+            controller.salvar(funcionario);
             this.Close();
         }
     }

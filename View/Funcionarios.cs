@@ -70,5 +70,30 @@ namespace Clinica.View
             controller.deletar(funcionario);
             this.Close();
         }
+
+        private void editarBtn_Click(object sender, EventArgs e)
+        {
+            int rowindex = this.listagem.CurrentCell.RowIndex;
+
+            String codf = this.listagem.Rows[rowindex].Cells[0].Value.ToString();
+            String idade = this.listagem.Rows[rowindex].Cells[1].Value.ToString(); //idade
+            String cpf = this.listagem.Rows[rowindex].Cells[2].Value.ToString(); //cpf
+            String cidade = this.listagem.Rows[rowindex].Cells[3].Value.ToString();// cidade
+            String salario = this.listagem.Rows[rowindex].Cells[4].Value.ToString(); //salario
+            String cargo = this.listagem.Rows[rowindex].Cells[5].Value.ToString(); // cargo
+            String nome = this.listagem.Rows[rowindex].Cells[6].Value.ToString();// nome
+
+            Funcionario funcionario = new Funcionario();
+            funcionario.codf = int.Parse(codf);
+            funcionario.nome = nome;
+            funcionario.idade = int.Parse(idade);
+            funcionario.cpf = cpf;
+            funcionario.cidade = cidade;
+            funcionario.cargo = cargo;
+            funcionario.salario = double.Parse(salario);
+            FuncionarioController controller = new FuncionarioController();
+            controller.alterar(funcionario);
+            this.Close();
+        }
     }
 }

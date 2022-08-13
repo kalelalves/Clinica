@@ -32,7 +32,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button5 = new System.Windows.Forms.Button();
             this.deletar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.editarBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.filtroValor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -89,14 +89,15 @@
             this.deletar.UseVisualStyleBackColor = true;
             this.deletar.Click += new System.EventHandler(this.deletar_Click);
             // 
-            // button2
+            // editarBtn
             // 
-            this.button2.Location = new System.Drawing.Point(49, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.editarBtn.Location = new System.Drawing.Point(49, 278);
+            this.editarBtn.Name = "editarBtn";
+            this.editarBtn.Size = new System.Drawing.Size(75, 23);
+            this.editarBtn.TabIndex = 13;
+            this.editarBtn.Text = "Editar";
+            this.editarBtn.UseVisualStyleBackColor = true;
+            this.editarBtn.Click += new System.EventHandler(this.editarBtn_Click);
             // 
             // label1
             // 
@@ -190,7 +191,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(novoBtn);
             this.Controls.Add(this.deletar);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.editarBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.filtroValor);
             this.Controls.Add(this.button1);
@@ -213,7 +214,7 @@
         private System.Windows.Forms.TextBox filtroValor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView listagem;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button editarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codf;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn idade;
