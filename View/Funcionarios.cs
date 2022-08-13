@@ -17,10 +17,30 @@ namespace Clinica.View
             InitializeComponent();
         }
 
+
+        public Funcionarios(DataTable funcionarios)
+        {
+            InitializeComponent();
+            this.listagem.DataSource = funcionarios;
+
+
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
             inicio.Show();
+            this.Close();
+        }
+
+        private void Funcionarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void novoBtn_Click(object sender, EventArgs e)
+        {
+            FuncionarioCriar funcionarioCriar = new FuncionarioCriar(); 
+            funcionarioCriar.Show();
             this.Close();
         }
     }

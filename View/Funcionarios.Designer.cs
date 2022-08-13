@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button novoBtn;
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,8 +42,9 @@
             this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doenca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            novoBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,14 +69,15 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // novoBtn
             // 
-            this.button4.Location = new System.Drawing.Point(414, 278);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Novo";
-            this.button4.UseVisualStyleBackColor = true;
+            novoBtn.Location = new System.Drawing.Point(414, 278);
+            novoBtn.Name = "novoBtn";
+            novoBtn.Size = new System.Drawing.Size(75, 23);
+            novoBtn.TabIndex = 15;
+            novoBtn.Text = "Novo";
+            novoBtn.UseVisualStyleBackColor = true;
+            novoBtn.Click += new System.EventHandler(this.novoBtn_Click);
             // 
             // button3
             // 
@@ -129,7 +131,7 @@
             this.idade,
             this.cidade,
             this.cpf,
-            this.doenca,
+            this.cargo,
             this.Salario});
             this.listagem.Location = new System.Drawing.Point(14, 57);
             this.listagem.Name = "listagem";
@@ -167,14 +169,15 @@
             this.cpf.HeaderText = "CPF";
             this.cpf.Name = "cpf";
             // 
-            // doenca
+            // cargo
             // 
-            this.doenca.DataPropertyName = "doenca";
-            this.doenca.HeaderText = "Cargo";
-            this.doenca.Name = "doenca";
+            this.cargo.DataPropertyName = "cargo";
+            this.cargo.HeaderText = "Cargo";
+            this.cargo.Name = "cargo";
             // 
             // Salario
             // 
+            this.Salario.DataPropertyName = "salario";
             this.Salario.HeaderText = "Salario";
             this.Salario.Name = "Salario";
             // 
@@ -185,7 +188,7 @@
             this.ClientSize = new System.Drawing.Size(709, 349);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(novoBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -194,6 +197,7 @@
             this.Controls.Add(this.listagem);
             this.Name = "Funcionarios";
             this.Text = "Funcionarios";
+            this.Load += new System.EventHandler(this.Funcionarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,7 +208,6 @@
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
@@ -216,7 +219,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idade;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doenca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Clinica.View;
+﻿using Clinica.Controller;
+using Clinica.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,8 +49,8 @@ namespace Clinica
 
         private void funcionarioBtn_Click(object sender, EventArgs e)
         {
-            Funcionarios funcionarios = new Funcionarios();
-            funcionarios.Show();
+            FuncionarioController funcionariosController = new FuncionarioController();
+            funcionariosController.listar();
             this.Hide();
         }
     }
