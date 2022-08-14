@@ -44,6 +44,7 @@
             this.nome_label = new System.Windows.Forms.Label();
             this.codigoAValor = new System.Windows.Forms.TextBox();
             this.codigo_label = new System.Windows.Forms.Label();
+            this.voltarBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // codmValor
@@ -195,11 +196,22 @@
             this.codigo_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.codigo_label.Click += new System.EventHandler(this.codigo_label_Click);
             // 
+            // voltarBtn
+            // 
+            this.voltarBtn.Location = new System.Drawing.Point(0, 0);
+            this.voltarBtn.Name = "voltarBtn";
+            this.voltarBtn.Size = new System.Drawing.Size(75, 23);
+            this.voltarBtn.TabIndex = 46;
+            this.voltarBtn.Text = "Voltar";
+            this.voltarBtn.UseVisualStyleBackColor = true;
+            this.voltarBtn.Click += new System.EventHandler(this.voltarBtn_Click);
+            // 
             // MedicosEditarcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 450);
+            this.Controls.Add(this.voltarBtn);
             this.Controls.Add(this.codmValor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.salvar);
@@ -242,5 +254,6 @@
         private System.Windows.Forms.Label nome_label;
         private System.Windows.Forms.TextBox codigoAValor;
         private System.Windows.Forms.Label codigo_label;
+        private System.Windows.Forms.Button voltarBtn;
     }
 }

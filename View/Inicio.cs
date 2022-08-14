@@ -35,8 +35,8 @@ namespace Clinica
 
         private void medicoBtn_Click(object sender, EventArgs e)
         {
-            Medicos medico = new Medicos();
-            medico.Show();
+           MedicosController medicosController = new MedicosController();
+            medicosController.listar();
             this.Hide();
         }
 
@@ -52,6 +52,11 @@ namespace Clinica
             FuncionarioController funcionariosController = new FuncionarioController();
             funcionariosController.listar();
             this.Hide();
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

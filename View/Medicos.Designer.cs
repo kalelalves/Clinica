@@ -28,76 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nroa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listagem = new System.Windows.Forms.DataGridView();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.criarmedBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.codm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.listagem)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // listagem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.listagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listagem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codm,
+            this.nrao,
             this.Nome,
             this.idade,
             this.especialidade,
             this.CPF,
-            this.cidade,
-            this.nroa});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(545, 251);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // codm
-            // 
-            this.codm.HeaderText = "Codigo";
-            this.codm.Name = "codm";
-            this.codm.Visible = false;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "nome";
-            this.Nome.Name = "Nome";
-            // 
-            // idade
-            // 
-            this.idade.HeaderText = "Idade";
-            this.idade.Name = "idade";
-            // 
-            // especialidade
-            // 
-            this.especialidade.HeaderText = "Especialidade";
-            this.especialidade.Name = "especialidade";
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "cpf";
-            this.CPF.Name = "CPF";
-            this.CPF.Visible = false;
-            // 
-            // cidade
-            // 
-            this.cidade.HeaderText = "Cidade";
-            this.cidade.Name = "cidade";
-            // 
-            // nroa
-            // 
-            this.nroa.HeaderText = "Ambulatório";
-            this.nroa.Name = "nroa";
+            this.cidade});
+            this.listagem.Location = new System.Drawing.Point(2, 56);
+            this.listagem.Name = "listagem";
+            this.listagem.Size = new System.Drawing.Size(545, 251);
+            this.listagem.TabIndex = 4;
+            this.listagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // listBox1
             // 
@@ -157,6 +120,49 @@
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // codm
+            // 
+            this.codm.DataPropertyName = "codm";
+            this.codm.HeaderText = "Codigo";
+            this.codm.Name = "codm";
+            // 
+            // nrao
+            // 
+            this.nrao.DataPropertyName = "nrao";
+            this.nrao.HeaderText = "Ambulatório";
+            this.nrao.Name = "nrao";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "nome";
+            this.Nome.Name = "Nome";
+            // 
+            // idade
+            // 
+            this.idade.DataPropertyName = "idade";
+            this.idade.HeaderText = "Idade";
+            this.idade.Name = "idade";
+            // 
+            // especialidade
+            // 
+            this.especialidade.DataPropertyName = "especialidade";
+            this.especialidade.HeaderText = "Especialidade";
+            this.especialidade.Name = "especialidade";
+            // 
+            // CPF
+            // 
+            this.CPF.DataPropertyName = "cpf";
+            this.CPF.HeaderText = "cpf";
+            this.CPF.Name = "CPF";
+            this.CPF.Visible = false;
+            // 
+            // cidade
+            // 
+            this.cidade.DataPropertyName = "cidade";
+            this.cidade.HeaderText = "Cidade";
+            this.cidade.Name = "cidade";
+            // 
             // Medicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,28 +174,29 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listagem);
             this.Name = "Medicos";
             this.Text = "Medicos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Medicos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.listagem)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn especialidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nroa;
+        private System.Windows.Forms.DataGridView listagem;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button criarmedBtn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn especialidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
     }
 }

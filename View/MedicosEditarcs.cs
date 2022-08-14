@@ -18,7 +18,7 @@ namespace Clinica
             InitializeComponent();
             Medico m = (Medico) medico;
             this.codmValor.Text = m.codm.ToString();
-            this.codigoAValor.Text = m.Ambulatorio.nroa.ToString();
+         // this.codigoAValor.Text = m.Ambulatorio.nroa.ToString();
             this.nomeValor.Text = m.nome;
             this.idadeValor.Text = m.idade.ToString();
             this.cpfValor.Text = m.cpf;
@@ -129,6 +129,13 @@ namespace Clinica
         private void codigo_label_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void voltarBtn_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Close();
         }
     }
 }

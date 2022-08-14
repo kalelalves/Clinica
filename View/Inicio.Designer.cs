@@ -97,6 +97,7 @@
             this.Controls.Add(this.pacienteBtn);
             this.Name = "Inicio";
             this.Text = "Sistema Clinica";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

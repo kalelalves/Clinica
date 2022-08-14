@@ -15,6 +15,16 @@ namespace Clinica
         public Medicos()
         {
             InitializeComponent();
+
+
+        }
+
+
+        public Medicos(object medicos)
+        {
+            InitializeComponent();
+            this.listagem.DataSource = medicos;
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -34,6 +44,11 @@ namespace Clinica
             Inicio inicio = new Inicio();
             inicio.Show();
             this.Close();
+        }
+
+        private void Medicos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clinica.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,17 +26,17 @@ namespace Clinica
         private void salvar_Click(object sender, EventArgs e)
         {
             Medico medico = new Medico();
-            medico.Ambulatorio.nroa = int.Parse( this.codigoAValor.Text);
-            medico.codm = int.Parse(this.codmValor.Text);
+            //medico.Ambulatorio.nroa = int.Parse( this.codigoAValor.Text);
+            //medico.codm = int.Parse(this.codmValor.Text);
             medico.nome = this.nomeValor.Text;
             medico.idade = int.Parse(this.idadeValor.Text);
             medico.cidade = this.cidadeValor.Text;
             medico.cpf = this.cpfValor.Text;
             medico.especialidade = this.especialidadeValor.Text;
 
-            MedicosEditarcs medicosEditar = new MedicosEditarcs(medico);
-
-            medicosEditar.Show();
+            MedicosController controller = new MedicosController();
+            controller.criar(medico);
+       
             this.Close();
         }
 
