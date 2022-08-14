@@ -33,7 +33,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.criarmedBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.codm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +56,7 @@
             this.especialidade,
             this.CPF,
             this.cidade});
-            this.listagem.Location = new System.Drawing.Point(2, 56);
+            this.listagem.Location = new System.Drawing.Point(12, 56);
             this.listagem.Name = "listagem";
             this.listagem.Size = new System.Drawing.Size(545, 251);
             this.listagem.TabIndex = 4;
@@ -102,14 +102,15 @@
             this.criarmedBtn.UseVisualStyleBackColor = true;
             this.criarmedBtn.Click += new System.EventHandler(this.criarmedBtn_Click);
             // 
-            // button3
+            // deleteBtn
             // 
-            this.button3.Location = new System.Drawing.Point(200, 364);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Deletar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.deleteBtn.Location = new System.Drawing.Point(200, 364);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(75, 23);
+            this.deleteBtn.TabIndex = 13;
+            this.deleteBtn.Text = "Deletar";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // button2
             // 
@@ -169,7 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 399);
             this.Controls.Add(this.criarmedBtn);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
@@ -189,7 +190,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button criarmedBtn;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn codm;
         private System.Windows.Forms.DataGridViewTextBoxColumn nrao;

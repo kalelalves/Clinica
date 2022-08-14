@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clinica.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,19 @@ namespace Clinica
         private void Medicos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            int rowindex = this.listagem.CurrentCell.RowIndex;
+            String codm = this.listagem.Rows[rowindex].Cells[0].Value.ToString();
+
+            Medico medico = new Medico();
+            medico.codm = int.Parse(codm);
+
+            MedicosController controller = new MedicosController();
+            controller.deletar(medico);
+            this.Close();
         }
     }
 }

@@ -57,7 +57,21 @@ namespace Clinica.DAO
 
         public void delete(object chave)
         {
-            throw new NotImplementedException();
+
+            Medico medico = (Medico)chave;
+            MySQLPersist banco = new MySQLPersist();
+            try
+            {
+                string sql = "delete from medicos " +
+                     "where codm=@codm";
+                List<MySqlParameter> parametros = new List<MySqlParameter>();
+                parametros.Add(new MySqlParameter("@codm", medico.codm));
+                banco.ExecutaNonQuery(sql, parametros);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
         }
 
         public object read(object chave)

@@ -33,6 +33,16 @@ namespace Clinica.Controller
             MedicosEditarcs edicao = new MedicosEditarcs(medico);
             edicao.Show();
         }
+        
+        public void deletar(object objeto)
+        {
+            Medico medico = (Medico)objeto;
+            MedicoDAO medicoDAO = new MedicoDAO();
+            medicoDAO.delete(medico);
+            listar();
+        }
+
+
     }
 }
 
