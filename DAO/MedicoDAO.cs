@@ -81,7 +81,40 @@ namespace Clinica.DAO
 
         public void update(object objeto)
         {
-            throw new NotImplementedException();
+            Medico medico = (Medico)objeto;
+            MySQLPersist banco = new MySQLPersist();
+
+            try
+            {
+
+                string sql = "update medicos" +
+                     " set nome =@nome," +
+                     "idade=@idade," +
+                     "cidade=@cidade," +
+                     "cpf=@cpf," +
+                     "especialidade=@especialidade," +
+                     "nrao = @nrao" +
+                     " where codm = @codm ";
+
+                List<MySqlParameter> parametros = new List<MySqlParameter>();
+                parametros.Add(new MySqlParameter("@nome", medico.nome));
+                parametros.Add(new MySqlParameter("@idade", medico.idade));
+                parametros.Add(new MySqlParameter("@cidade", medico.cidade));
+                parametros.Add(new MySqlParameter("@cpf", medico.cpf));
+                parametros.Add(new MySqlParameter("@especialidade", medico.especialidade));
+                parametros.Add(new MySqlParameter("@nrao", medico.nrao));
+                parametros.Add(new MySqlParameter("@codm", medico.codm));
+
+
+
+          int id = Convert.ToInt32(banco.ExecuteNonQueryLastKey(sql, parametros));
+                medico.codm = id;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            //return medico;
         }
     }
 }

@@ -64,5 +64,34 @@ namespace Clinica
             controller.deletar(medico);
             this.Close();
         }
+
+        private void editarBTn_Click(object sender, EventArgs e)
+        {
+            int rowindex = this.listagem.CurrentCell.RowIndex;
+            String codm = this.listagem.Rows[rowindex].Cells[0].Value.ToString();
+            String nrao = this.listagem.Rows[rowindex].Cells[1].Value.ToString();//nrao
+            String cidade = this.listagem.Rows[rowindex].Cells[2].Value.ToString(); //cidade
+            String nome = this.listagem.Rows[rowindex].Cells[3].Value.ToString();// nome
+            String idade = this.listagem.Rows[rowindex].Cells[4].Value.ToString(); // idade
+            String especialidade = this.listagem.Rows[rowindex].Cells[5].Value.ToString(); // especialidade
+            String cpf = this.listagem.Rows[rowindex].Cells[6].Value.ToString(); //cpf
+
+            if(nrao==""||nrao==null)
+            {
+                nrao = "000";
+            }
+            Medico medico = new Medico();
+            medico.codm = int.Parse(codm);
+            medico.nrao = int.Parse(nrao);
+            medico.nome = nome;
+            medico.especialidade = especialidade;
+            medico.cidade = cidade;
+            medico.idade = int.Parse(idade);
+            medico.cpf = cpf;
+
+            MedicosController controller = new MedicosController();
+            controller.alterar(medico);
+            this.Close();
+        }
     }
 }

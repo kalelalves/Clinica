@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clinica.Controller;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Clinica
             InitializeComponent();
             Medico m = (Medico) medico;
             this.codmValor.Text = m.codm.ToString();
-         // this.codigoAValor.Text = m.Ambulatorio.nroa.ToString();
+            this.codigoAValor.Text = m.nrao.ToString();
             this.nomeValor.Text = m.nome;
             this.idadeValor.Text = m.idade.ToString();
             this.cpfValor.Text = m.cpf;
@@ -37,7 +38,7 @@ namespace Clinica
         {
 
             Medico medico = new Medico();
-            medico.Ambulatorio.nroa = int.Parse(this.codigoAValor.Text);
+            medico.nrao = int.Parse(this.codigoAValor.Text);
             medico.codm = int.Parse(this.codmValor.Text);
             medico.nome = this.nomeValor.Text;
             medico.idade = int.Parse(this.idadeValor.Text);
@@ -46,12 +47,9 @@ namespace Clinica
             medico.especialidade = this.especialidadeValor.Text;
 
 
-            ArrayList medicos = new ArrayList();
-            medicos.Add(medico);
-
-            //Medicos listagem = new Medicos(medicos);
-            //listagem.Show();
-            //this.Close();
+            MedicosController controller = new MedicosController();
+            controller.salvar(medico);
+            this.Close();
 
 
         }

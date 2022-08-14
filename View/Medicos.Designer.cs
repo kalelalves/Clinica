@@ -34,7 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.criarmedBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.editarBTn = new System.Windows.Forms.Button();
             this.codm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,14 +112,15 @@
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
-            // button2
+            // editarBTn
             // 
-            this.button2.Location = new System.Drawing.Point(33, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.editarBTn.Location = new System.Drawing.Point(33, 364);
+            this.editarBTn.Name = "editarBTn";
+            this.editarBTn.Size = new System.Drawing.Size(75, 23);
+            this.editarBTn.TabIndex = 12;
+            this.editarBTn.Text = "Editar";
+            this.editarBTn.UseVisualStyleBackColor = true;
+            this.editarBTn.Click += new System.EventHandler(this.editarBTn_Click);
             // 
             // codm
             // 
@@ -171,7 +172,7 @@
             this.ClientSize = new System.Drawing.Size(572, 399);
             this.Controls.Add(this.criarmedBtn);
             this.Controls.Add(this.deleteBtn);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.editarBTn);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button1);
@@ -191,7 +192,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button criarmedBtn;
         private System.Windows.Forms.Button deleteBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button editarBTn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codm;
         private System.Windows.Forms.DataGridViewTextBoxColumn nrao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
