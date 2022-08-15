@@ -105,14 +105,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ConsultaController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\MedicosController.cs" />
     <Compile Include="Controller\PacienteController.cs" />
+    <Compile Include="DAO\ConsultaDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\IDAO.cs" />
     <Compile Include="DAO\MedicoDAO.cs" />
     <Compile Include="DAO\PacienteDAO.cs" />
     <Compile Include="Models\Ambulatorio.cs" />
+    <Compile Include="Models\Consulta.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="View\Ambulatorios.cs">
       <SubType>Form</SubType>

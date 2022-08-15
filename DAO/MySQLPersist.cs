@@ -5,7 +5,7 @@ using System.Web;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
-
+using MySql.Data.Types;
 namespace Clinica
 {
      /// <summary>
@@ -25,7 +25,7 @@ namespace Clinica
         public MySQLPersist(bool fecharConexaoAutomaticamente = true)
         {
             _fecharConexaoAutomaticamente = fecharConexaoAutomaticamente;
-            _conexao = new MySqlConnection("server=localhost;port=3306;Database=clinica;Uid=kalel;Password=kalel1234;");
+            _conexao = new MySqlConnection("server=localhost;port=3306;Database=clinica;Uid=kalel;Password=kalel1234; Convert Zero Datetime=True;");
             _cmd = _conexao.CreateCommand();
         }
 

@@ -42,8 +42,8 @@ namespace Clinica
 
         private void consultaBtn_Click(object sender, EventArgs e)
         {
-            Consultas consultas = new Consultas();
-            consultas.Show();
+            ConsultaController consultaController = new ConsultaController();
+            consultaController.listar();
             this.Hide();
         }
 

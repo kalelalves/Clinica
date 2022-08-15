@@ -30,9 +30,9 @@
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.novaconsultaBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.editarBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.filtroValor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,32 +65,35 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // novaconsultaBtn
             // 
-            this.button4.Location = new System.Drawing.Point(379, 234);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Novo";
-            this.button4.UseVisualStyleBackColor = true;
+            this.novaconsultaBtn.Location = new System.Drawing.Point(379, 234);
+            this.novaconsultaBtn.Name = "novaconsultaBtn";
+            this.novaconsultaBtn.Size = new System.Drawing.Size(75, 23);
+            this.novaconsultaBtn.TabIndex = 15;
+            this.novaconsultaBtn.Text = "Novo";
+            this.novaconsultaBtn.UseVisualStyleBackColor = true;
+            this.novaconsultaBtn.Click += new System.EventHandler(this.novaconsultaBtn_Click);
             // 
-            // button3
+            // deleteBtn
             // 
-            this.button3.Location = new System.Drawing.Point(181, 234);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Deletar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.deleteBtn.Location = new System.Drawing.Point(181, 234);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(75, 23);
+            this.deleteBtn.TabIndex = 14;
+            this.deleteBtn.Text = "Deletar";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
-            // button2
+            // editarBtn
             // 
-            this.button2.Location = new System.Drawing.Point(14, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.editarBtn.Location = new System.Drawing.Point(14, 234);
+            this.editarBtn.Name = "editarBtn";
+            this.editarBtn.Size = new System.Drawing.Size(75, 23);
+            this.editarBtn.TabIndex = 13;
+            this.editarBtn.Text = "Editar";
+            this.editarBtn.UseVisualStyleBackColor = true;
+            this.editarBtn.Click += new System.EventHandler(this.editarBtn_Click);
             // 
             // label1
             // 
@@ -161,15 +164,16 @@
             this.ClientSize = new System.Drawing.Size(529, 296);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.novaconsultaBtn);
+            this.Controls.Add(this.deleteBtn);
+            this.Controls.Add(this.editarBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.filtroValor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listagem);
             this.Name = "Consultas";
             this.Text = "Consultas";
+            this.Load += new System.EventHandler(this.Consultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,16 +184,16 @@
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button novaconsultaBtn;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Button editarBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox filtroValor;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView listagem;
         private System.Windows.Forms.DataGridViewTextBoxColumn codm;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn data;
         private System.Windows.Forms.DataGridViewTextBoxColumn hora;
+        public System.Windows.Forms.DataGridView listagem;
     }
 }
